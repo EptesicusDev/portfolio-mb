@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <Card className="container mx-auto bg-card py-3 px-4 flex items-center justify-between gap-6 shadow-none border-0">
+    <Card className="p-3 px-4 flex items-center justify-between gap-6 shadow-none border-0 fixed w-full bg-blur rounded-none z-30">
 
       <ul className="hidden md:flex items-center gap-10 text-card-foreground">
         <li>
