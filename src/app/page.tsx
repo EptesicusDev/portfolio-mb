@@ -1,4 +1,5 @@
-import { BackgroundLines } from "../components/ui/background-lines";
+import { BackgroundLines } from "@/components/ui/background-lines";
+import { GlowingEffectGrid } from "@/components/ui/glowing-effect-grid";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           Rigoureux et passionné de développement Web. Mon prochain objectif est d’acquérir de solides compétences en cybersécurité.
         </p>
       </BackgroundLines>
+      <GlowingEffectGrid />
       <div className="w-full h-screen flex">
         <p className="m-auto">coming soon...</p>
       </div>
