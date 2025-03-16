@@ -11,7 +11,7 @@ export function Navbar() {
     },
     {
       name: "Project",
-      link: "#",
+      link: "#projects",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {

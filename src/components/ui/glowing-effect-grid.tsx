@@ -1,44 +1,51 @@
 "use client";
 
-import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
+import { Box } from "lucide-react";
 import { GlowingEffect } from "./glowing-effect";
+import { Badge } from "@/components/ui/badge"
+
 
 export function GlowingEffectGrid() {
   return (
-    <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 p-4">
+    <ul id="projects" className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 p-4">
       <GridItem
         area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
         icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="Do things the right way"
-        description="Running out of copy so I'll write anything."
+        title="Crocodive"
+        description="Une application mobile cross plateforme pour les adhérents d'une association."
+        technos={[{name: "React Native", color: "sky"}, {name: "Laravel", color: "red"}]}
       />
  
       <GridItem
         area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
-        icon={<Settings className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="The best AI code editor ever."
-        description="Yes, it's true. I'm not even kidding. Ask my mom if you don't believe me."
+        icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
+        title="ChatbotDAFC"
+        description="Refonte avec carte blanche de l'interface d'un des Chatbots de chez Orano, simple et épurée."
+        technos={[{name: "Bootstrap", color: "indigo"}, {name: "OpenAI", color: "teal"}]}
       />
  
       <GridItem
         area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
-        icon={<Lock className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="You should buy Aceternity UI Pro"
-        description="It's the best money you'll ever spend"
+        icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
+        title="Blog Twitter-like"
+        description="Le but de cette application est d'héberger les posts que mon équipe et moi créons pour constituer notre veille technologique. Je me suis fortement inspiré des applications avec un feed qui trône au centre (Twitter, Linkedin, ...)."
+        technos={[{name: "Vue JS", color: "green"}, {name: "Tailwind", color: "cyan"}]}
       />
  
       <GridItem
         area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
-        icon={<Sparkles className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="This card is also built by Cursor"
-        description="I'm not even kidding. Ask my mom if you don't believe me."
+        icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
+        title="Portfolio"
+        description="Voilà ma vision du beau en terme de Frontend. Fait avec passion pour m'exercer avec une stack technique à la pointe de la technologie."
+        technos={[{name: "Next JS", color: "neutral"}, {name: "Aceternity", color: "neutral"}, {name: "shadcn/ui", color: "neutral"}, {name: "Vercel", color: "neutral"}]}
       />
  
       <GridItem
         area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
-        icon={<Search className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="Coming soon on Aceternity UI"
-        description="I'm writing the code as I record this, no shit."
+        icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
+        title="Coming soon..."
+        description="..."
+        technos={[]}
       />
     </ul>
   );
@@ -49,9 +56,10 @@ interface GridItemProps {
   icon: React.ReactNode;
   title: string;
   description: React.ReactNode;
+  technos: {name: string, color: string}[];
 }
  
-const GridItem = ({ area, icon, title, description }: GridItemProps) => {
+const GridItem = ({ area, icon, title, description, technos }: GridItemProps) => {
   return (
     <li className={`min-h-[14rem] list-none ${area}`}>
       <div className="relative h-full rounded-2.5xl border  p-2  md:rounded-3xl md:p-3">
@@ -71,6 +79,11 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
               <h3 className="pt-0.5 text-xl/[1.375rem] font-semibold font-sans -tracking-4 md:text-2xl/[1.875rem] text-balance text-black dark:text-white">
                 {title}
               </h3>
+              <div className="flex gap-1">
+                {technos.map((techno, index) => 
+                  <Badge className={`bg-${techno.color}-950 hover:bg-${techno.color}-950/80`} variant="secondary" key={index}>{techno.name}</Badge>
+                )}
+              </div>
               <h2
                 className="[&_b]:md:font-semibold [&_strong]:md:font-semibold font-sans text-sm/[1.125rem] 
               md:text-base/[1.375rem]  text-black dark:text-neutral-400"
