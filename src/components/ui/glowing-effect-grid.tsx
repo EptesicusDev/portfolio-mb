@@ -37,7 +37,7 @@ export function GlowingEffectGrid() {
         icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
         title="Portfolio"
         description="Voilà ma vision du beau en terme de Frontend. Fait avec passion pour m'exercer avec une stack technique à la pointe de la technologie."
-        technos={[{name: "Next JS", color: "neutral"}, {name: "Aceternity", color: "neutral"}, {name: "shadcn/ui", color: "neutral"}, {name: "Vercel", color: "neutral"}]}
+        technos={[{name: "Next JS", color: "slate"}, {name: "Aceternity", color: "slate"}, {name: "shadcn/ui", color: "slate"}, {name: "Vercel", color: "slate"}]}
       />
  
       <GridItem
@@ -81,7 +81,7 @@ const GridItem = ({ area, icon, title, description, technos }: GridItemProps) =>
               </h3>
               <div className="flex gap-1">
                 {technos.map((techno, index) => 
-                  <Badge className={`bg-${techno.color}-950 hover:bg-${techno.color}-950/80`} variant="secondary" key={index}>{techno.name}</Badge>
+                  <Badge className={`bg-${techno.color}-500 dark:bg-${techno.color}-900`} variant="default" key={index}>{techno.name}</Badge>
                 )}
               </div>
               <h2
