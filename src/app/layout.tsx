@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning style={{scrollBehavior:'smooth'}}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <title>Portfolio MB</title>

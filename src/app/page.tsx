@@ -1,5 +1,27 @@
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { GlowingEffectGrid } from "@/components/ui/glowing-effect-grid";
+import { ProjectSection } from "@/components/ui/project-section";
+
+const projectsData = [
+  {
+    title: "Crocodive",
+    body: "",
+    slides: [
+      {
+        title: "crocodive_front_skills",
+        src: "/public/images/IMG_3201.jpg"
+      },
+      {
+        title: "crocodive_front_home",
+        src: "/public/images/IMG_3205.jpg"
+      },
+      {
+        title: "crocodive_front_login",
+        src: "/public/images/IMG_3207.jpg"
+      },
+    ]
+  }
+]
 
 export default function Home() {
   return (
@@ -12,7 +34,12 @@ export default function Home() {
           Rigoureux et passionné de développement Web. Mon prochain objectif est d’acquérir de solides compétences en cybersécurité.
         </p>
       </BackgroundLines>
+      <div className="ps-4 pt-4">
+        <h1 className="font-extrabold text-4xl mb-2">Projets</h1>
+        <p className="text-black dark:text-neutral-400">Une liste non-exhaustive des mes projets les plus montrables.</p>
+      </div>
       <GlowingEffectGrid />
+      <ProjectSection slides={projectsData[0].slides} title={projectsData[0].title} body={projectsData[0].body}/>
       <div className="w-full h-screen flex">
         <p className="m-auto">coming soon...</p>
       </div>

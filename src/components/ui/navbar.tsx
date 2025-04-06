@@ -10,12 +10,12 @@ export function Navbar() {
       icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Project",
+      name: "Projets",
       link: "#projects",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "About",
+      name: "A propos",
       link: "#",
       icon: (
         <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
