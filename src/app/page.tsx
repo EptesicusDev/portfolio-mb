@@ -5,19 +5,19 @@ import { ProjectSection } from "@/components/ui/project-section";
 const projectsData = [
   {
     title: "Crocodive",
-    body: "",
+    body: "Crocodive est un projet réalisé en groupe de 9 dans le cadre des mes études. Il est composé d'un Backend Laravel et d'un Frontend en React Native. L'application est conçue pour accueillir les données d'un club de plongée, allant de la liste des plongeurs, des accompagnateurs jusqu'à l'agenda détaillé de toutes les séances prévues.",
     slides: [
       {
         title: "crocodive_front_skills",
-        src: "/public/images/IMG_3201.jpg"
+        src: "/images/IMG_3201.jpg"
       },
       {
         title: "crocodive_front_home",
-        src: "/public/images/IMG_3205.jpg"
+        src: "/images/IMG_3205.jpg"
       },
       {
         title: "crocodive_front_login",
-        src: "/public/images/IMG_3207.jpg"
+        src: "/images/IMG_3207.jpg"
       },
     ]
   }
@@ -39,7 +39,7 @@ export default function Home() {
         <p className="text-black dark:text-neutral-400">Une liste non-exhaustive des mes projets les plus montrables.</p>
       </div>
       <GlowingEffectGrid />
-      <ProjectSection slides={projectsData[0].slides} title={projectsData[0].title} body={projectsData[0].body}/>
+      <ProjectSection slides={projectsData[0].slides} title={projectsData[0].title} body={projectsData[0].body} />
       <div className="w-full h-screen flex">
         <p className="m-auto">coming soon...</p>
       </div>

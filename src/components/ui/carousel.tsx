@@ -90,19 +90,13 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <img
-            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
-            style={{
-              opacity: current === index ? 1 : 0.5,
-            }}
+            className="absolute inset-0 w-[120%] opacity-100 transition-opacity duration-600 ease-in-out"
             alt={title}
             src={src}
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync"
           />
-          {current != index && (
-            <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
-          )}
         </div>
       </li>
     </div>

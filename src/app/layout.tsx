@@ -26,7 +26,7 @@ export default function RootLayout({
         <title>Portfolio MB</title>
       </head>
       <body
-        className={`${montserrat.className} antialiased`}
+        className={`${montserrat.className} antialiased overflow-x-hidden`}
       >
         <ThemeProvider
           attribute="class"
